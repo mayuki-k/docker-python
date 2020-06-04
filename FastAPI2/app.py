@@ -25,3 +25,8 @@ async def h():
     with sem_thread:
         heveay_task()
         return {"Message":"HelloWorld"}
+
+@app.get("/t")
+async def t():
+    heveay_task()
+    return {"Message":"HelloWorld"}
