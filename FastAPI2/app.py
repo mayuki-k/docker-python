@@ -11,10 +11,10 @@ def heveay_task():
     time.sleep(10)
     print(f'終了 {datetime.now()}')
 
+sem = asyncio.Semaphore(1)
 
 @app.get("/")
 async def root():
-    sem = asyncio.Semaphore(1)
     with await sem:
         heveay_task()
-        return {"message": "Hello World"}
+        return {"message": "Hello World"} 
