@@ -16,3 +16,7 @@ docker exec -it yuki /bin/bash
 ```
 gunicorn --bind 0.0.0.0 app:app -w 4 -k uvicorn.workers.UvicornWorker
 ```
+
+```
+gunicorn --bind 0.0.0.0 app:app --workers 1 --threads 8 -k uvicorn.workers.UvicornWorker
+```
