@@ -4,6 +4,11 @@
 docker run -itd --name yuki -p 8000:8000 test /bin/sh
 ```
 
+# 起動2
+
+```
+docker run -d --name yuki -p 8000:8000 test
+```
 
 # Dockerの中に入る
 
